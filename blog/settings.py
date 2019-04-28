@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-blog-inst.herokuapp.com']
 
 
 # Application definition
@@ -86,7 +86,7 @@ if "DATABASES_URL" in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-    
+
 else:
     print("Postgres URL is not found, using sqlite instead")
     DATABASES = {
